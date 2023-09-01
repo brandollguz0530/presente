@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url("/site-bg.jpg");
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+  
+  #contenedorBotones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 25%;
+    cursor: pointer;
+}
+
+
+  #btnNo {
+      animation: moveButton 2s infinite alternate;
+      margin-left: 80px
+  }
+
+  #btnSi {
+    animation: moveButton 2s infinite alternate;
+    margin-right: 80px;
+}
+  @keyframes moveButton {
+      0% {
+          transform: translateX(0);
+      }
+      100% {
+          transform: translateX(10px);
+      }
+  }
+  #btnNo {
+    position: absolute; /* o position: fixed; */
+    /* Otros estilos para el botón aquí */
+}
+@media (max-width: 768px) {
+  #contenedorBotones {
+      flex-direction: column;
+  }
+}
+
+h1 {
+  color: cornsilk;
+}
+
+.carousel-container {
+  
+  margin-top: 20px;
+  display: flex;
+  overflow: hidden; /* Oculta el desbordamiento de las imágenes */
+  width: 100%;
+  height: auto;
+}
+
+.carousel-slide {
+  flex: 0 0 100%; /* Cada imagen ocupa el 100% del ancho del contenedor */
+  transition: transform 1s ease; /* Agrega una transición suave al cambiar las imágenes */
+}
+
+img {
+  max-width: 100%; /* Hace que la imagen sea más pequeña sin perder la relación de aspecto */
+  height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+  object-fit: cover; /* Ajusta la imagen para llenar completamente el contenedor */
+}
